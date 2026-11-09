@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5cab">
+  <title>Lager-Scanner</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <button id="back" class="icon-btn" aria-label="Zurück" hidden>‹</button>
+    <h1 id="title">Lager-Scanner</h1>
+    <span id="mode" class="badge" hidden>DEMO</span>
+    <button id="logout" class="icon-btn" aria-label="Abmelden" hidden>⏻</button>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Kamera-Scanner -->
+  <div id="scanner" class="scanner" hidden>
+    <div id="reader"></div>
+    <p class="scanner-hint">Barcode in den Rahmen halten</p>
+    <button id="scanner-close" class="btn btn-light">Abbrechen</button>
+  </div>
+
+  <script src="vendor/html5-qrcode.min.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

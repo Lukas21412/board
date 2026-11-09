@@ -1,0 +1,20 @@
+{
+  "name": "lager-scanner",
+  "version": "0.1.0",
+  "description": "Mobile Scanner-Web-App für SAP Business One (Service Layer): Bestand, Kommissionierung, Warenausgang, Umlagerung, Inventur",
+  "private": true,
+  "type": "module",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "MOCK=1 node --watch server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "html5-qrcode": "^2.3.8"
+  }
+}
